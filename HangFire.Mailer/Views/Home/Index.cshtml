@@ -1,0 +1,17 @@
+﻿@using HangFire.Mailer.Models
+@model IEnumerable<HangFire.Mailer.Models.Comment>
+@{ ViewBag.Title = "Comments"; }
+
+<h2>Comments</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <h3>@item.UserName</h3>
+            <p>@item.Text</p>
+        </li>
+    }
+</ul>
+
+@Html.Partial("Create", new Comment())
