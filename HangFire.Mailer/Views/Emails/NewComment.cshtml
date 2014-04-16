@@ -1,0 +1,11 @@
+﻿@model HangFire.Mailer.Models.NewCommentEmail
+To: @Model.To
+From: mailer@example.com
+Subject: New comment posted
+
+Hello,
+There is a new comment from @Model.UserName:
+
+@Model.Comment
+
+<3
