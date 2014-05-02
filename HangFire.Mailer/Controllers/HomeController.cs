@@ -1,5 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Web.Hosting;
 using System.Web.Mvc;
 using HangFire.Mailer.Models;
@@ -26,6 +29,7 @@ namespace HangFire.Mailer.Controllers
                 _db.Comments.Add(model);
                 _db.SaveChanges();
 
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("es-ES");
                 BackgroundJob.Enqueue(() => NotifyNewComment(model.Id));
             }
 
@@ -34,6 +38,12 @@ namespace HangFire.Mailer.Controllers
 
         public static void NotifyNewComment(int commentId)
         {
+            var currentCultureName = Thread.CurrentThread.CurrentCulture.Name;
+            if (currentCultureName != "es-ES")
+            {
+                throw new InvalidOperationException(String.Format("Current culture is {0}", currentCultureName));
+            }
+
             // Prepare Postal classes to work outside of ASP.NET request
             var viewsPath = Path.GetFullPath(HostingEnvironment.MapPath(@"~/Views/Emails"));
             var engines = new ViewEngineCollection();
