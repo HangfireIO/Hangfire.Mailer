@@ -5,11 +5,10 @@ using System.Linq;
 using System.Threading;
 using System.Web.Hosting;
 using System.Web.Mvc;
-using Hangfire;
-using HangFire.Mailer.Models;
+using Hangfire.Mailer.Models;
 using Postal;
 
-namespace HangFire.Mailer.Controllers
+namespace Hangfire.Mailer.Controllers
 {
     public class HomeController : Controller
     {

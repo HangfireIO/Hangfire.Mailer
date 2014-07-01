@@ -4,7 +4,7 @@ using Hangfire.Common;
 using Hangfire.States;
 using Hangfire.Storage;
 
-namespace HangFire.Mailer
+namespace Hangfire.Mailer
 {
     public class LogFailureAttribute : JobFilterAttribute, IApplyStateFilter
     {

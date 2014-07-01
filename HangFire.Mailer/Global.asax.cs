@@ -1,11 +1,10 @@
 ﻿using System.Data.Entity;
 using System.Web.Mvc;
 using System.Web.Routing;
-using HangFire.Mailer.Controllers;
-using HangFire.Mailer.Migrations;
-using HangFire.Mailer.Models;
+using Hangfire.Mailer.Migrations;
+using Hangfire.Mailer.Models;
 
-namespace HangFire.Mailer
+namespace Hangfire.Mailer
 {
     public class MvcApplication : System.Web.HttpApplication
     {

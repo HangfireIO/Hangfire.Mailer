@@ -1,6 +1,6 @@
 ﻿using Postal;
 
-namespace HangFire.Mailer.Models
+namespace Hangfire.Mailer.Models
 {
     public class NewCommentEmail : Email
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-namespace HangFire.Mailer.Models
+namespace Hangfire.Mailer.Models
 {
     public class Comment
     {

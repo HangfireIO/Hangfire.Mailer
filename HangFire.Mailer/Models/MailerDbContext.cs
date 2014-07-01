@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace HangFire.Mailer.Models
+namespace Hangfire.Mailer.Models
 {
     public class MailerDbContext : DbContext
     {

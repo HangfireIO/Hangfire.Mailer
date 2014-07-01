@@ -1,11 +1,10 @@
-﻿using Hangfire;
-using Hangfire.SqlServer;
+﻿using Hangfire.SqlServer;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(HangFire.Mailer.Startup))]
+[assembly: OwinStartup(typeof(Hangfire.Mailer.Startup))]
 
-namespace HangFire.Mailer
+namespace Hangfire.Mailer
 {
     public class Startup
     {

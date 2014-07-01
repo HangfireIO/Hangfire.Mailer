@@ -1,4 +1,4 @@
-namespace HangFire.Mailer.Migrations
+namespace Hangfire.Mailer.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
