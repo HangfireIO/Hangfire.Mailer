@@ -1,10 +1,10 @@
 ﻿using System;
 using Common.Logging;
-using HangFire.Common;
-using HangFire.States;
-using HangFire.Storage;
+using Hangfire.Common;
+using Hangfire.States;
+using Hangfire.Storage;
 
-namespace HangFire.Mailer.Controllers
+namespace HangFire.Mailer
 {
     public class LogFailureAttribute : JobFilterAttribute, IApplyStateFilter
     {

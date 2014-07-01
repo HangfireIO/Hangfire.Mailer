@@ -15,8 +15,6 @@ namespace HangFire.Mailer
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<MailerDbContext, Configuration>());
-
-            GlobalJobFilters.Filters.Add(new LogFailureAttribute());
         }
     }
 }

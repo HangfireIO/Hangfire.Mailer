@@ -1,4 +1,5 @@
-﻿using HangFire.SqlServer;
+﻿using Hangfire;
+using Hangfire.SqlServer;
 using Microsoft.Owin;
 using Owin;
 
@@ -10,8 +11,9 @@ namespace HangFire.Mailer
     {
         public void Configuration(IAppBuilder app)
         {
-            app.UseHangFire(config =>
+            app.UseHangfire(config =>
             {
+                config.UseFilter(new LogFailureAttribute());
                 config.UseSqlServerStorage("MailerDb");
                 config.UseServer();
             });

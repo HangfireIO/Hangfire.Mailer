@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Web.Hosting;
 using System.Web.Mvc;
+using Hangfire;
 using HangFire.Mailer.Models;
 using Postal;
 
