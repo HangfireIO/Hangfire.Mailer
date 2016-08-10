@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Mailer", "HangFire.Mailer\Hangfire.Mailer.csproj", "{595C1569-F17D-4EF8-B9B4-BD049FF5BCBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Mailer", "Hangfire.Mailer\Hangfire.Mailer.csproj", "{595C1569-F17D-4EF8-B9B4-BD049FF5BCBE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5E17319B-D575-4186-97D3-EE150C66709D}"
 	ProjectSection(SolutionItems) = preProject
