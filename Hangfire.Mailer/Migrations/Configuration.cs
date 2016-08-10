@@ -9,7 +9,7 @@ namespace Hangfire.Mailer.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Models.MailerDbContext context)

@@ -1,17 +1,27 @@
 ﻿@using Hangfire.Mailer.Models
-@model IEnumerable<Hangfire.Mailer.Models.Comment>
+@model ICollection<Hangfire.Mailer.Models.Comment>
 @{ ViewBag.Title = "Comments"; }
 
 <h2>Comments</h2>
 
-<ul>
-    @foreach (var item in Model)
+@if (Model.Count > 0)
+{
+    foreach (var item in Model)
     {
-        <li>
-            <h3>@item.UserName</h3>
-            <p>@item.Text</p>
-        </li>
+        <div class="media">
+            <div class="media-left">
+                <img src="http://placehold.it/64x64">
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">@item.UserName</h4>
+                <p>@item.Text</p>
+            </div>
+       </div>
     }
-</ul>
+}
+else
+{
+    <div class="alert alert-info">There are no comments yet. Try create a new one!</div>
+}
 
 @Html.Partial("Create", new Comment())
