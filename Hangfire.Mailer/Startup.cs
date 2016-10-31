@@ -1,6 +1,4 @@
-﻿using System;
-using Hangfire.SqlServer;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartup(typeof(Hangfire.Mailer.Startup))]
@@ -12,9 +10,7 @@ namespace Hangfire.Mailer
         public void Configuration(IAppBuilder app)
         {
             GlobalConfiguration.Configuration
-                .UseSqlServerStorage(
-                    "MailerDb",
-                    new SqlServerStorageOptions { QueuePollInterval = TimeSpan.FromSeconds(1) })
+                .UseSqlServerStorage("MailerDb")
                 .UseFilter(new LogFailureAttribute());
 
             app.UseHangfireDashboard();
